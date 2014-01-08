@@ -1,0 +1,38 @@
+add r0, r1, r2 #test
+ADDD F1 f0 F2
+ADDD R1 R0 R2
+MULTD F2, R0, F8
+SD 12333 F0 R2
+MULTD F2 F0 F8
+ADDD R1 R0 R2
+ADDD F1 f0 F2
+ADDI R1, R2, -12
+ADDI R2 R8 10
+ADDI R4 R2 -10
+ ADDD	R1,wsef F0
+ADDD,   	r2
+BEQZ R1 helloLabel
+#.breakpoint
+#breakpoint:
+ADDI R4 R8 -1212
+SUBI F0 F1 234
+#dokimjaeidefe:      #first label of the two won't be added to the dictionary (known limitation)
+0x2346:
+MULTD F2 F0 F8
+helloLabel:
+#0x2347:
+SD 12d23 R2 F4
+#breakpoint.
+LD F3 454332 R3
+SD dw3
+#dokimastikolabellabel:
+SD 12333 F0 F2
+SD 12333 F0 R2
+#helloLabel:         #duplicate label, the program should throw an error unless commented-out
+SGTI R2 R0 R8
+#dokimastikolabellabellabel:
+SGTI R2 R0 F0
+LD F3 454332 R3
+#weffwe	
+ edwsf wde #erffg ewf
+MULTD R8 F0 F3
